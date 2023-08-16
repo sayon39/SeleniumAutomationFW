@@ -3,6 +3,7 @@ package com.crm.qa.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -29,6 +30,7 @@ public class TestBase {
 		}
 	}
 	
+	@SuppressWarnings("deprecation")
 	public static void initialization() {
 		String browserName=prop.getProperty("browser");
 		
@@ -47,8 +49,8 @@ public class TestBase {
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
 		driver.get(prop.getProperty("url"));
 	}
