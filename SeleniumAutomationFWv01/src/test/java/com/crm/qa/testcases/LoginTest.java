@@ -1,5 +1,9 @@
 package com.crm.qa.testcases;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -26,7 +30,7 @@ public class LoginTest extends TestBase{
 	}
 	
 	@BeforeMethod
-	public void setUp() {
+	public void setUp() throws IOException {
 		initialization();
 		lp= new LoginPage();
 		rp= new RegistrationPage();
@@ -41,12 +45,13 @@ public class LoginTest extends TestBase{
 	}
 	
 	@Test(dataProvider="getCRMRegistrationData")
-	public void createNewUserAccount(String Firstname, String LastName, String Title) throws InterruptedException {
+	public void createNewUserAccount(String Firstname, String LastName, String Title) throws InterruptedException, AWTException {
 		lp.clickTryforFree();
 		rp.registration(Firstname, LastName, Title);
 		Thread.sleep(5000);
-		driver.switchTo().alert();
+		
 	}
+	
 	
 	@AfterMethod
 	public void tearDown() {

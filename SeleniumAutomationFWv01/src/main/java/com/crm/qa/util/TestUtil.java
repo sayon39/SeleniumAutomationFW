@@ -14,8 +14,8 @@ import com.crm.qa.base.TestBase;
 
 public class TestUtil extends TestBase{
 	
-	public static String TESTDATA_SHEET_PATH = "/Users/sayondas/eclipse-workspace/SeleniumAutomationFWv01/"
-			+ "src/main/java/com/crm/qa/testdata/CRMTestInput.xlsx";
+	public static String TESTDATA_SHEET_PATH = "/Users/sayondas/git/SeleniumAutomationFW/"
+			+ "SeleniumAutomationFWv01/src/main/java/com/crm/qa/testdata/CRMTestInput.xlsx";
 
 	static Workbook book;
 	static Sheet sheet;
