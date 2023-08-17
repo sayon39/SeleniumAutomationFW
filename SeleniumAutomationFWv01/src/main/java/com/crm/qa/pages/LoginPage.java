@@ -16,7 +16,6 @@ public class LoginPage extends TestBase{
 	//OR
 	
 	@FindBy(xpath="//a[@id='signup_link']")
-	
 	WebElement btn_tryForFree;
 	
 	//methods
