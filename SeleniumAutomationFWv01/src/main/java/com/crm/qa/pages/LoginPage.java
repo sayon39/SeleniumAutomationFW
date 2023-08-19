@@ -18,6 +18,8 @@ public class LoginPage extends TestBase{
 	@FindBy(xpath="//a[@id='signup_link']")
 	WebElement btn_tryForFree;
 	
+	
+	
 	//methods
 	
 	public void clickTryforFree() {

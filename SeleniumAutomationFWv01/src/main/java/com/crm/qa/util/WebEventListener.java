@@ -84,25 +84,25 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 
 	@Override
 	public void beforeFindBy(By by, WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
+		System.out.println("Before finding:'"+element+"'in the DOM") ;
 		
 	}
 
 	@Override
 	public void afterFindBy(By by, WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
+		System.out.println("After finding:'"+element+"'in the DOM") ;
 		
 	}
 
 	@Override
 	public void beforeClickOn(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
+		System.out.println("After clicking on:'"+element+"'") ;
 		
 	}
 
 	@Override
 	public void afterClickOn(WebElement element, WebDriver driver) {
-		// TODO Auto-generated method stub
+		System.out.println("After clicking on:'"+element+"'") ;
 		
 	}
 
@@ -120,13 +120,13 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 
 	@Override
 	public void beforeScript(String script, WebDriver driver) {
-		// TODO Auto-generated method stub
+		System.out.println("Start executing the test :'"+script+"'") ;
 		
 	}
 
 	@Override
 	public void afterScript(String script, WebDriver driver) {
-		// TODO Auto-generated method stub
+		System.out.println("Execution completed :'"+script+"'") ;
 		
 	}
 

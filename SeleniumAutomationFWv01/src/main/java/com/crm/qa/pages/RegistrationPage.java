@@ -22,9 +22,16 @@ public class RegistrationPage extends TestBase{
 	@FindBy(name="UserTitle")
 	WebElement txt_Title;
 	
+	@FindBy(xpath="(//*[text()='Accept All Cookies'])[1]")
+	WebElement btn_AcceptAllCookies;
+	
+	
 	//method
 	
-	public void registration(String fname, String lname, String title) {
+	public void registration(String fname, String lname, String title) throws InterruptedException {
+		Thread.sleep(5000);
+		btn_AcceptAllCookies.click();
+		Thread.sleep(3000);
 		txt_FirstName.sendKeys(fname);
 		txt_LastName.sendKeys(lname);
 		txt_Title.sendKeys(title);
